@@ -11,7 +11,7 @@ import { IModuleState } from '@/store/modules/module1/types';
 
 export default defineComponent({
   computed: {
-    ...mapState<IModuleState>({
+    ...mapState('module1', {
       bar: (state: IModuleState) => state.bar,
     }),
   },
@@ -22,3 +22,10 @@ export default defineComponent({
   },
 });
 </script>
+
+<style>
+.bar-class {
+  font-size: 30px;
+  color: red;
+}
+</style>
